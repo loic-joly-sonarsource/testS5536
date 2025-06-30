@@ -1,3 +1,5 @@
+#include "lib.h"
+
 class Foo
 {
 public:
@@ -6,7 +8,11 @@ public:
     static void Bar3() {};
 };
 
-void f() {}
+void f() {
+    g();
+}
 
 int main() {
+    f();
+    Foo::Bar2();
 }
